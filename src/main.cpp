@@ -18,6 +18,8 @@
 int main() {
     stdio_init_all();
 
+    printf("SkiTag Firmware Version: %s\\n", FIRMWARE_VERSION);
+
     // Initialize drivers
     Buzzer buzzer(BUZZER_PIN);
     LSM6DSOX_I2C imu_driver(i2c0, LSM6DSOX_SDA_PIN, LSM6DSOX_SCL_PIN);

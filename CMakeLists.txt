@@ -4,21 +4,15 @@ cmake_minimum_required(VERSION 3.13)
 # This will be cloned into the build directory
 include(pico_sdk_import.cmake)
 
-project(skitag_firmware C CXX ASM)
+project(skitag_firmware VERSION 0.1.0 C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
+# Pass version to the code
+target_compile_definitions(skitag_firmware PUBLIC "FIRMWARE_VERSION=\\"${PROJECT_VERSION}\\"")
+
 # Initializes the Pico SDK
 pico_sdk_init()
-
-# Add executable
-add_executable(skitag_firmware
-    src/main.cpp
-    src/hal/gpio/buzzer.cpp
-    src/hal/i2c/lsm6dsox_i2c.cpp
-    src/hal/spi/nina_spi.cpp
-    src/ble/find_my.cpp
-)
 
 # Add executable
 add_executable(skitag_firmware
