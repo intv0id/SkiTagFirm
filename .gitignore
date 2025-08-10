@@ -1,0 +1,23 @@
+# Build artifacts
+build/
+*.o
+*.a
+*.so
+*.elf
+*.uf2
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+
+# Doxygen documentation
+docs/
+
+# VSCode settings
+.vscode/
+
+# User-specific files
+*.user
+*.DS_Store
