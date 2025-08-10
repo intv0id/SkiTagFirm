@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.13)
 # This will be cloned into the build directory
 include(pico_sdk_import.cmake)
 
-project(skitag_firmware VERSION 0.1.0 C CXX ASM)
+project(skitag_firmware VERSION 0.1.0 LANGUAGES C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
